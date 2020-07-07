@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Category List</h2>
+	<a href="/home">Back to Home</a> | 
+	<a href="/categories/create">Create New</a>
+	<a href="/categories/search">Search Category</a>
+
+	<br/><br/>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>DESCRIPTION</th>
+			<th>OPTION</th>
+		</tr>
+		<% for(var i = 0; i < catList.length; i++){ %>
+		<tr>
+			<td><%= catList[i].id %></td>
+			<td><%= catList[i].name %></td>
+			<td><%= catList[i].description %></td>
+			<td>
+				<a href="/categories/edit/<%= catList[i].id %>" onclick="return confirm('Are you sure you want to delete this item?');">Edit</a> | 
+				<a href="/categories/delete/<%= catList[i].id %>" >Delete</a>
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

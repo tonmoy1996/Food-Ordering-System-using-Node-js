@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<div align="center">
+	<h2>Edit User Information</h2>
+	
+	<br/><br/>
+
+	<form method="post" action="">
+		<input type="hidden" name="pid" value="<%= id %>">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" value="<%= name %>"></td>
+			</tr>
+			<tr>
+				<td>UserName</td>
+				<td><input type="text" name="uname" value="<%= uname %>"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" name="pass" value="<%= pass %>"></td>
+			</tr>
+			
+			
+
+
+			<tr>
+				<td></td>
+				<td><input type="submit" onclick="return confirm('Are you sure you want to delete this item?');" value="Save" ></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>
